@@ -1,0 +1,34 @@
+.skillContainer {
+    padding: 0.25em;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+h5 {
+    margin: auto;
+    width: 100%;
+}
+
+.progressionBar {
+    position: relative;
+    margin: auto;
+    outline: var(--surface-3) solid 3px;
+    border-radius: var(--radius-2);
+    height: 0.5em; width: 100%; min-width: 175px;
+    background: var(--surface-4);
+}
+
+.progressionBar > div {
+    border-radius: var(--radius-2);
+    height: 0.5em;
+    background: var(--brand);
+}
+
+.progressionBar > label {
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+
+.progressionBar > label:nth-child(2) { top: -125%; left: 5% }
+.progressionBar > label:nth-child(3) { top: -125%; left: 50% }
+.progressionBar > label:nth-child(4) { top: -125%; left: 95% }

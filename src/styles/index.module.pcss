@@ -1,0 +1,89 @@
+main {
+    margin: auto;
+    padding: 1rem;
+    width: 1600px;
+    max-width: calc(100% - 2rem);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.sectionContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 2em;
+    background-color: var(--surface-2);
+}
+
+.sectionContainer > div:first-child {
+    animation: var(--animation-slide-in-right), var(--animation-fade-out) reverse;
+    animation-duration: 1500ms;
+    margin: 0 75% 0 0;
+}
+.sectionContainer > div:last-child {
+    animation: var(--animation-slide-in-left), var(--animation-fade-out) reverse;
+    animation-duration: 1250ms;
+    margin: 0 -75% 0 0;
+}
+
+
+.sectionText {
+    display: flex;
+    padding: 1em;
+}
+
+
+
+h1 {
+    color: var(--brand);
+    max-inline-size: var(--size-header-3);
+}
+h2 {
+    max-inline-size: 100%;
+}
+span {
+    color: var(--text-1);
+}
+p {
+    margin: auto;
+    text-align: center;
+    max-inline-size: var(--size-content-3);
+}
+
+
+.firstName {
+    opacity: 0;
+    display: inline-block;
+    animation: var(--animation-slide-in-right), var(--animation-fade-in-bloom) forwards;
+    animation-timing-function: var(--ease-elastic-in-out-3);
+    animation-duration: 1s;
+    color: var(--brand);
+}
+
+.firstName:nth-child(1) { animation-delay: 900ms }
+.firstName:nth-child(2) { animation-delay: 800ms }
+.firstName:nth-child(3) { animation-delay: 700ms }
+.firstName:nth-child(4) { animation-delay: 600ms }
+.firstName:nth-child(5) { animation-delay: 500ms }
+.firstName:nth-child(6) { animation-delay: 400ms }
+.firstName:nth-child(7) { animation-delay: 300ms }
+.firstName:nth-child(8) { animation-delay: 200ms }
+.firstName:nth-child(9) { animation-delay: 100ms }
+
+.lastName {
+    opacity: 0;
+    display: inline-block;
+    animation: var(--animation-slide-in-left), var(--animation-fade-in-bloom) forwards;
+    animation-timing-function: var(--ease-elastic-in-out-3);
+    animation-duration: 1s;
+    color: var(--brand);
+}
+
+.lastName:nth-child(1) { animation-delay: 800ms }
+.lastName:nth-child(2) { animation-delay: 700ms }
+.lastName:nth-child(3) { animation-delay: 600ms }
+.lastName:nth-child(4) { animation-delay: 500ms }
+.lastName:nth-child(5) { animation-delay: 400ms }
+.lastName:nth-child(6) { animation-delay: 300ms }
+
+

@@ -9,9 +9,9 @@ interface props {
 const AnimateString = ({text, className}: props) => {
     const Chars = Array.from(text)
     return Chars.map((char, Index) => {
-        return <span key={Index} className={className}>
+        return <div key={Index} className={className}>
             {char}
-        </span>
+        </div>
     })
 };
 
