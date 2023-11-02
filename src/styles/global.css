@@ -1,0 +1,64 @@
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --brand: #0d3cd9;
+
+        --text-1: #030921;
+
+        --surface-1: #ffffff;
+        --surface-2: #cccdd1;
+        --surface-3: #354064;
+
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --brand: #2656f2;
+
+        --text-1: #dee4fc;
+
+        --surface-1: #1f1f1f;
+        --surface-2: #2e2f33;
+        --surface-3: #9ba6ca;
+
+    }
+}
+
+
+body, p {
+    color: var(--text-1);
+    font-family: 'Sarala';
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--text-1);
+    font-family: 'Amaranth';
+    font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 5.652rem; /* 90.4px */}
+
+h2 {font-size: 3.997rem; /* 64px */}
+
+h3 {font-size: 2.827rem; /* 45.28px */}
+
+h4 {font-size: 1.999rem; /* 32px */}
+
+h5 {font-size: 1.414rem; /* 22.56px */}
+
+small {font-size: 0.707rem; /* 11.36px */}
+
+button {
+    background-color: var(--brand);
+    border: var(--border-size-2) solid var(--blue-5);
+}
+
+button:active {
+    animation: var(--animation-scale-down);
+    animation-duration: 250ms;
+}

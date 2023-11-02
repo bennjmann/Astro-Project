@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AnimateString from "../components/animateString";
+---
+
+<Layout title="Bennjmann Redman">
+	<main>
+		<div class="section-Container">
+			<div>My name is</div>
+			<h1> <AnimateString client:only="react" className="lastName"  text="Bennjmann"/>&nbsp;<AnimateString client:only="react" className="firstName" text="Redman"/></h1>
+			<div>I am a Developer</div>
+		</div>
+
+		<div class="section-Text">
+			<p>
+				Hello! My name is Bennjmann Redman you can call me Ben for short.
+				Im a Developer who likes to work with a wide range of different technologies like high level languages such as Python to low level languages like C++ as well as use a wide range of frameworks like react or create games using engines like unity.
+				I have a diverse range of knowledge over landscape of coding and want to explore even deeper.
+			</p>
+			<p>
+				During my time working with these tool I’ve also picked up other skills like design and graphic design leading to developing skills with in tools adobe space of tools.
+			</p>
+		</div>
+
+		<div class="section-Container">
+			<h2> Run down of my Skills And Projects</h2>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1600px;
+		max-width: calc(100% - 2rem);
+		line-height: 1.6;
+		text-align: center;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.section-Container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		padding: 2em;
+		background-color: var(--surface-2);
+	}
+
+	.section-Container > div:first-child {
+		margin: 0 75% 0 0;
+	}
+	.section-Container > div:last-child {
+		margin: 0 -75% 0 0;
+	}
+
+
+	.section-Text {
+		display: flex;
+		padding: 1em;
+	}
+
+
+
+	h1 {
+		color: var(--brand);
+		max-inline-size: var(--size-header-3);
+	}
+	h2 {
+		max-inline-size: 100%;
+	}
+	span {
+		color: var(--text-1);
+	}
+	p {
+		margin: auto;
+		text-align: center;
+		max-inline-size: var(--size-content-3);
+	}
+
+
+
+</style>
+<style is:global>
+
+	.firstName {
+		color: var(--brand);
+	}
+
+	.lastName {
+		color: white;
+	}
+
+</style>
