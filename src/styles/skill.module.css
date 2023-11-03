@@ -1,34 +1,58 @@
 .skillContainer {
-    padding: 0.25em;
+    padding: 0.3em;
     display: inline-flex;
     flex-direction: row;
+    gap: 1em;
 }
 
 h5 {
     margin: auto;
-    width: 100%;
+    width: auto;
 }
 
 .progressionBar {
     position: relative;
-    margin: auto;
+    margin: auto 1.5em;
     outline: var(--surface-3) solid 3px;
     border-radius: var(--radius-2);
-    height: 0.5em; width: 100%; min-width: 175px;
+    height: 0.5em; min-width: 250px;
     background: var(--surface-4);
 }
 
 .progressionBar > div {
+    animation: Fill-To 2500ms ease-out;
     border-radius: var(--radius-2);
     height: 0.5em;
     background: var(--brand);
 }
 
 .progressionBar > label {
+    opacity: 0;
+    animation: var(--animation-fade-in) forwards 250ms;
     transform: translate(-50%,-50%);
     position: absolute;
 }
+.progressionBar > label:before {
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 2px;
+    height: 25%;
+    border-radius: var(--radius-1);
+    background: var(--surface-3);
+}
 
-.progressionBar > label:nth-child(2) { top: -125%; left: 5% }
-.progressionBar > label:nth-child(3) { top: -125%; left: 50% }
-.progressionBar > label:nth-child(4) { top: -125%; left: 95% }
+.progressionBar > label:nth-child(2) { top: -160%; left: 0%;}
+.progressionBar > label:nth-child(3) { top: -160%; left: 50%; animation-delay: 650ms }
+.progressionBar > label:nth-child(4) { top: -160%; left: 99%; animation-delay: 1300ms}
+
+
+@keyframes Fill-To {
+    0% {
+        max-width: 10px;
+    }
+    100% {
+        max-width: 100%;
+    }
+}

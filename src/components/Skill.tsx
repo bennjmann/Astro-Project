@@ -13,13 +13,13 @@ interface Props {
 const Skill = ({title, rating, src, alt} : Props) => {
     return (
         <div className={Styles.skillContainer}>
-            <img src={src} alt={alt} width="100" height="100" loading="lazy" decoding="async"/>
+            <img src={src} alt={alt} width="50" height="50" loading="lazy" decoding="async"/>
             <h5>{title}</h5>
             <div className={Styles.progressionBar}>
                 <div style={{width:`${rating}%`}}/>
-                <label>1</label>
-                <label>50</label>
-                <label>100</label>
+                <label>beginner</label>
+                <label>intermediate</label>
+                <label>advanced</label>
             </div>
         </div>
     );

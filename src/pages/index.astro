@@ -1,6 +1,5 @@
 ---
 import Styles from "../styles/index.module.pcss"
-
 import Layout from '../layouts/Layout.astro';
 import AnimateString from "../components/animateString";
 import Skill from "../components/Skill"
@@ -30,15 +29,20 @@ import Skill from "../components/Skill"
 		</div>
 
 		<div class={Styles.sectionText}>
-			<div>
-				<Skill title="HTML" alt="Skill img" rating={24} client:only="react" />
-				<Skill title="CSS" alt="Skill img" rating={24} client:only="react" />
-				<Skill title="JAVASCRIPT" alt="Skill img" rating={24} client:only="react" />
-				<Skill title="TYPESCRIPT" alt="Skill img" rating={24} client:only="react" />
-				<Skill title="C#" alt="Skill img" rating={24} client:only="react" />
-				<Skill title="PYTHON" alt="Skill img" rating={24} client:only="react" />
-				<Skill title="SQL" alt="Skill img" rating={24} client:only="react" />
-				<Skill title="REACT" alt="Skill img" rating={24} client:only="react" />
+			<div class={Styles.skillsContainer}>
+				<Skill title="HTML" src="../../images/HTML5.png" alt="Skill img" rating={100} client:only="react" />
+				<Skill title="CSS" src="../../images/CSS3-logo.png" alt="Skill img" rating={85} client:only="react" />
+				<Skill title="JAVASCRIPT" src="../../images/js-logo.png" alt="Skill img" rating={90} client:only="react" />
+				<Skill title="TYPESCRIPT" src="../../images/ts-logo.png" alt="Skill img" rating={80} client:only="react" />
+				<Skill title="C#" src="../../images/Csharp-Logo.png" alt="Skill img" rating={75} client:only="react" />
+				<Skill title="PYTHON" src="../../images/python-icon.png" alt="Skill img" rating={75} client:only="react" />
+				<Skill title="SQL" src="../../images/Sql-logo.png" alt="Skill img" rating={60} client:only="react" />
+				<Skill title="REACT" src="../../images/React-icon.png" alt="Skill img" rating={70} client:only="react" />
+				<Skill title="ASTRO" src="../../images/astro-icon-light.png" alt="Skill img" rating={40} client:only="react" />
+				<Skill title="GATSBY" src="../../images/Gatsby-Monogram.png" alt="Skill img" rating={60} client:only="react" />
+				<Skill title="WORDPRESS" src="../../images/WordPress-logo.png" alt="Skill img" rating={45} client:only="react" />
+				<Skill title="PHOTOSHOP" src="../../images/Photoshop-icon.png" rating={40} client:only="react" />
+				<Skill title="ILLUSTRATOR" src="../../images/Illustrator-icon.png" alt="Skill img" rating={50} client:only="react" />
 			</div>
 		</div>
 	</main>
