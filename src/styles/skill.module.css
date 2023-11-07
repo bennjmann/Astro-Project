@@ -20,18 +20,23 @@ h5 {
 }
 
 .progressionBar > div {
-    animation: Fill-To 2500ms ease-out;
     border-radius: var(--radius-2);
     height: 0.5em;
     background: var(--brand);
 }
+.skillContainer.animate > .progressionBar > div {
+    animation: Fill-To 3500ms ease-out;
+}
 
 .progressionBar > label {
     opacity: 0;
-    animation: var(--animation-fade-in) forwards 250ms;
     transform: translate(-50%,-50%);
     position: absolute;
 }
+.skillContainer.animate > .progressionBar > label {
+    animation: var(--animation-fade-in) forwards 250ms;
+}
+
 .progressionBar > label:before {
     content: '';
     position: absolute;

@@ -3,11 +3,12 @@ import Styles from "../styles/index.module.pcss"
 import Layout from '../layouts/Layout.astro';
 import AnimateString from "../components/animateString";
 import Skill from "../components/Skill"
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Bennjmann Redman">
 	<main>
-		<div class={Styles.sectionContainer}>
+		<div class={Styles.sectionContainer} id="about">
 			<div>My name is</div>
 			<h1> <AnimateString client:only="react" className={Styles.firstName}  text="Bennjmann"/>&nbsp;<AnimateString client:only="react" className={Styles.lastName} text="Redman"/></h1>
 			<div>I am a Developer</div>
@@ -23,12 +24,31 @@ import Skill from "../components/Skill"
 				During my time working with these tool I’ve also picked up other skills like design and graphic design leading to developing skills with in tools adobe space of tools.
 			</p>
 		</div>
-
-		<div class={Styles.sectionContainer}>
-			<h2>My Skills</h2>
+		<div class={Styles.sectionContainer} id="projects">
+			<h2>My projects and contributions</h2>
+		</div>
+		<div class={Styles.sectionContent}>
+			<Card title="Project 1"/>
+			<Card title="Project 2"/>
+			<Card title="Project 3"/>
+			<Card title="Project 4"/>
 		</div>
 
-		<div class={Styles.sectionText}>
+		<div class={Styles.sectionContainer} id="contact">
+			<h2>My services</h2>
+		</div>
+
+		<div class={Styles.sectionContent}>
+
+			<p>For any enquires contact me  at : bennjmann.red@gmail.com</p>
+		</div>
+
+		<div class={Styles.sectionContainer}>
+			<h2>Skills I've Gathered</h2>
+		</div>
+
+		<div class={Styles.sectionContent} id="skills">
+			<p>Below is a List Of technologies, frameworks and coding languages i've used in the past</p>
 			<div class={Styles.skillsContainer}>
 				<Skill title="HTML" src="../../images/HTML5.png" alt="Skill img" rating={100} client:only="react" />
 				<Skill title="CSS" src="../../images/CSS3-logo.png" alt="Skill img" rating={85} client:only="react" />
