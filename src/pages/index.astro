@@ -3,7 +3,7 @@ import Styles from "../styles/index.module.pcss"
 import Layout from '../layouts/Layout.astro';
 import AnimateString from "../components/animateString";
 import Skill from "../components/Skill"
-import Card from "../components/Card.astro";
+import Project from "../components/Project";
 ---
 
 <Layout title="Bennjmann Redman">
@@ -28,10 +28,27 @@ import Card from "../components/Card.astro";
 			<h2>My projects and contributions</h2>
 		</div>
 		<div class={Styles.sectionContent}>
-			<Card title="Project 1"/>
-			<Card title="Project 2"/>
-			<Card title="Project 3"/>
-			<Card title="Project 4"/>
+			<Project client:only="react" alt="Project image" title="Cordwells Website"
+					 type="Website" date={new Date()} link="https://cordwells.au/">
+				This is a Concrete company website featuring many different pages for display of products
+				and about page with featuring a user capturing complex design. Built using Gatsby and Wordpress as the CMS
+			</Project>
+			<Project client:only="react" alt="Project image" title="QCTesting Website"
+					 type="Website" date={new Date()} link="https://qctesting.au/">
+				This is a basic website featuring a low number of pages and a simplified layout providing the
+				best viewing experience for the user. This website require special feature or required elements for their
+				nata accreditation. Built using Gatsby
+			</Project>
+			<Project client:only="react" alt="Project image" title="Water Testing Application"
+					 type="Web Application" date={new Date()} link="http://localhost:4321/">
+				An web application used at QCTesting to keep records of their quarry's water testing built using Next.js
+				in addition to other library's.
+			</Project>
+			<Project client:only="react" alt="Project image" title="Ecommerce Website"
+					 type="Website" date={new Date()} link="http://localhost:4321/" github="./">
+				Basic ecommerce website showing off full SEO setup, shopify check out system and dynamic product pages
+				as well as a user friendly layout.
+			</Project>
 		</div>
 
 		<div class={Styles.sectionContainer} id="contact">
@@ -40,7 +57,7 @@ import Card from "../components/Card.astro";
 
 		<div class={Styles.sectionContent}>
 
-			<p>For any enquires contact me  at : bennjmann.red@gmail.com</p>
+			<p>For any enquires business enquires contact me  at : <b>bennjmann.red@gmail.com</b></p>
 		</div>
 
 		<div class={Styles.sectionContainer}>
@@ -63,6 +80,7 @@ import Card from "../components/Card.astro";
 				<Skill title="WORDPRESS" src="../../images/WordPress-logo.png" alt="Skill img" rating={45} client:only="react" />
 				<Skill title="PHOTOSHOP" src="../../images/Photoshop-icon.png" rating={40} client:only="react" />
 				<Skill title="ILLUSTRATOR" src="../../images/Illustrator-icon.png" alt="Skill img" rating={50} client:only="react" />
+				<Skill title="UNITY" src="../../images/Illustrator-icon.png" alt="Skill img" rating={75} client:only="react" />
 			</div>
 		</div>
 	</main>
