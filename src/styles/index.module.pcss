@@ -55,13 +55,23 @@ main {
 }
 
 .sectionContent {
-    margin: auto;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.projectsWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-row: auto;
     gap: var(--size-2);
     padding: var(--size-3) 0;
+}
 
+.skillsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: auto;
+    gap: var(--size-3);
 }
 
 
@@ -118,15 +128,16 @@ p {
 .lastName:nth-child(6) { animation-delay: 200ms }
 
 
-.skillsContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row: auto;
-    gap: var(--size-3);
-}
+
 
 @media (--md-n-below) {
     .sectionContainer > h1 {
         font-size: 4rem;
+    }
+    .projectsWrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skillsContainer {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

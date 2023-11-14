@@ -32,27 +32,29 @@ import Header from "../components/Header";
 			<h2>Projects</h2>
 		</div>
 		<div class={Styles.sectionContent}>
-			<Project client:only="react" alt="Project image" title="Cordwells Website"
-					 type="Website" date={new Date()} link="https://cordwells.au/" src="/images/test.png">
-				This is a Concrete company website featuring many different pages for display of products
-				and about page with featuring a user capturing complex design. Built using Gatsby and Wordpress as the CMS
-			</Project>
-			<Project client:only="react" alt="Project image" title="QCTesting Website"
-					 type="Website" date={new Date()} link="https://qctesting.au/" src="/images/test.png">
-				This is a basic website featuring a low number of pages and a simplified layout providing the
-				best viewing experience for the user. This website require special feature or required elements for their
-				nata accreditation. Built using Gatsby
-			</Project>
-			<Project client:only="react" alt="Project image" title="Water Application"
-					 type="Web Application" date={new Date()} link="http://localhost:4321/" src="/images/test.png">
-				An web application used at QCTesting to keep records of their quarry's water testing built using Next.js
-				in addition to other library's.
-			</Project>
-			<Project client:only="react" alt="Project image" title="Ecommerce Website"
-					 type="Website" date={new Date()} link="http://localhost:4321/" github="./" src="/images/test.png">
-				Basic ecommerce website showing off full SEO setup, shopify check out system and dynamic product pages
-				as well as a user friendly layout.
-			</Project>
+			<div class={Styles.projectsWrapper}>
+				<Project client:only="react" alt="Project image" title="Cordwells Website"
+						 type="Website" date={new Date()} link="https://cordwells.au/" src="/images/test.png">
+					This is a Concrete company website featuring many different pages for display of products
+					and about page with featuring a user capturing complex design. Built using Gatsby and Wordpress as the CMS
+				</Project>
+				<Project client:only="react" alt="Project image" title="QCTesting Website"
+						 type="Website" date={new Date()} link="https://qctesting.au/" src="/images/test.png">
+					This is a basic website featuring a low number of pages and a simplified layout providing the
+					best viewing experience for the user. This website require special feature or required elements for their
+					nata accreditation. Built using Gatsby
+				</Project>
+				<Project client:only="react" alt="Project image" title="Water Application"
+						 type="Web Application" date={new Date()} link="http://localhost:4321/" src="/images/test.png">
+					An web application used at QCTesting to keep records of their quarry's water testing built using Next.js
+					in addition to other library's.
+				</Project>
+				<Project client:only="react" alt="Project image" title="Ecommerce Website"
+						 type="Website" date={new Date()} link="http://localhost:4321/" github="./" src="/images/test.png">
+					Basic ecommerce website showing off full SEO setup, shopify check out system and dynamic product pages
+					as well as a user friendly layout.
+				</Project>
+			</div>
 		</div>
 
 		<div class={Styles.sectionContainer}>
