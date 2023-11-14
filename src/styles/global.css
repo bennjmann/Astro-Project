@@ -1,18 +1,18 @@
 @media (--OSlight) {
     :root {
-        --brand: #0d3cd9;
+        --brand: #2685f2;
 
         --text-1: #030921;
 
         --surface-1: #ffffff;
-        --surface-2: #cccdd1;
+        --surface-2: #d5d7de;
 
     }
 }
 
 @media (--OSdark) {
     :root {
-        --brand: #2656f2;
+        --brand: #2685f2;
 
         --text-1: #dee4fc;
 
