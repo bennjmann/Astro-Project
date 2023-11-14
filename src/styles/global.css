@@ -1,6 +1,4 @@
-
-
-@media (prefers-color-scheme: light) {
+@media (--OSlight) {
     :root {
         --brand: #0d3cd9;
 
@@ -12,29 +10,29 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (--OSdark) {
     :root {
         --brand: #2656f2;
 
         --text-1: #dee4fc;
 
-        --surface-1: #1f1f1f;
-        --surface-2: #2e2f33;
+        --surface-1: #111111;
+        --surface-2: #212123;
 
     }
 }
 
 
-body, p {
+body, p, div {
     color: var(--text-1);
-    font-family: 'Sarala';
+    font-family: 'Sarala', serif;
     font-weight: 400;
 }
 
 h1, h2, h3, h4, h5 {
     color: var(--text-1);
-    font-family: 'Amaranth';
-    font-weight: 700;
+    font-family: 'Amaranth', serif;
+    font-weight: 800;
 }
 
 html {font-size: 100%;} /* 16px */
@@ -59,4 +57,7 @@ button {
 button:active {
     animation: var(--animation-scale-down);
     animation-duration: 250ms;
+}
+.blank {
+    height: 50px;
 }

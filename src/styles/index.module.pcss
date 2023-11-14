@@ -1,42 +1,66 @@
 main {
     margin: auto;
     padding: 1rem;
-    width: 1600px;
+    width: 1400px;
     max-width: calc(100% - 2rem);
     line-height: 1.6;
     text-align: center;
 }
 
 .sectionContainer {
+    box-shadow: var(--shadow-4);
     position: relative;
     overflow: hidden;
     width: 100%;
     padding: 2em;
     background-color: var(--surface-2);
 }
-
+.sectionContainer > div {
+ font-size: var(--font-size-2);
+}
 .sectionContainer > div:first-child {
     animation: var(--animation-slide-in-right), var(--animation-fade-out) reverse;
-    animation-duration: 1500ms;
-    margin: 0 75% 0 0;
+    animation-duration: 1200ms;
+    text-align: left;
+}
+.sectionContainer > h1 {
+    font-size: 8rem;
+    line-height: var(--font-lineheight-1);
+    letter-spacing: var(--font-letterspacing-0);
 }
 .sectionContainer > div:last-child {
     animation: var(--animation-slide-in-left), var(--animation-fade-out) reverse;
-    animation-duration: 1250ms;
-    margin: 0 -75% 0 0;
+    animation-duration: 1200ms;
+    text-align: right;
 }
 
+.sectionContainer > h2 {
+    text-align: left;
+    line-height: var(--font-lineheight-1);
+    letter-spacing: var(--font-letterspacing-3);
+}
 
 .sectionText {
+    width: 100%;
     display: flex;
-    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--size-2);
+    padding:  var(--size-2) 0 var(--size-4) 0;
+}
+.sectionText > p {
+    text-align: left;
+    font-size: var(--font-size-fluid-1);
+    line-height: var(--font-lineheight-4);
 }
 
 .sectionContent {
+    margin: auto;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--size-3);
-    padding: 2em 0;
+    gap: var(--size-2);
+    padding: var(--size-3) 0;
 
 }
 
@@ -55,7 +79,6 @@ span {
 p {
     margin: auto;
     text-align: center;
-    max-inline-size: var(--size-content-3);
 }
 
 
@@ -68,15 +91,15 @@ p {
     color: var(--brand);
 }
 
-.firstName:nth-child(1) { animation-delay: 900ms }
-.firstName:nth-child(2) { animation-delay: 800ms }
-.firstName:nth-child(3) { animation-delay: 700ms }
-.firstName:nth-child(4) { animation-delay: 600ms }
-.firstName:nth-child(5) { animation-delay: 500ms }
-.firstName:nth-child(6) { animation-delay: 400ms }
-.firstName:nth-child(7) { animation-delay: 300ms }
-.firstName:nth-child(8) { animation-delay: 200ms }
-.firstName:nth-child(9) { animation-delay: 100ms }
+.firstName:nth-child(1) { animation-delay: 450ms }
+.firstName:nth-child(2) { animation-delay: 400ms }
+.firstName:nth-child(3) { animation-delay: 350ms }
+.firstName:nth-child(4) { animation-delay: 300ms }
+.firstName:nth-child(5) { animation-delay: 250ms }
+.firstName:nth-child(6) { animation-delay: 200ms }
+.firstName:nth-child(7) { animation-delay: 150ms }
+.firstName:nth-child(8) { animation-delay: 100ms }
+.firstName:nth-child(9) { animation-delay: 50ms }
 
 .lastName {
     opacity: 0;
@@ -87,17 +110,23 @@ p {
     color: var(--brand);
 }
 
-.lastName:nth-child(1) { animation-delay: 800ms }
-.lastName:nth-child(2) { animation-delay: 700ms }
-.lastName:nth-child(3) { animation-delay: 600ms }
-.lastName:nth-child(4) { animation-delay: 500ms }
-.lastName:nth-child(5) { animation-delay: 400ms }
-.lastName:nth-child(6) { animation-delay: 300ms }
+.lastName:nth-child(1) { animation-delay: 450ms }
+.lastName:nth-child(2) { animation-delay: 400ms }
+.lastName:nth-child(3) { animation-delay: 350ms }
+.lastName:nth-child(4) { animation-delay: 300ms }
+.lastName:nth-child(5) { animation-delay: 250ms }
+.lastName:nth-child(6) { animation-delay: 200ms }
 
 
 .skillsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row: auto;
-    gap: 1em;
+    gap: var(--size-3);
+}
+
+@media (--md-n-below) {
+    .sectionContainer > h1 {
+        font-size: 4rem;
+    }
 }

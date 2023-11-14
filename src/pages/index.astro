@@ -4,68 +4,62 @@ import Layout from '../layouts/Layout.astro';
 import AnimateString from "../components/animateString";
 import Skill from "../components/Skill"
 import Project from "../components/Project";
+import Header from "../components/Header";
 ---
 
 <Layout title="Bennjmann Redman">
 	<main>
+		<Header/>
 		<div class={Styles.sectionContainer} id="about">
 			<div>My name is</div>
-			<h1> <AnimateString client:only="react" className={Styles.firstName}  text="Bennjmann"/>&nbsp;<AnimateString client:only="react" className={Styles.lastName} text="Redman"/></h1>
+			<h1> <AnimateString client:only="react" className={Styles.firstName}  text="Ben"/>&nbsp;<AnimateString client:only="react" className={Styles.lastName} text="Redman"/></h1>
 			<div>I am a Developer</div>
 		</div>
 
 		<div class={Styles.sectionText}>
-			<p>
-				Hello! My name is Bennjmann Redman you can call me Ben for short.
-				Im a Developer who likes to work with a wide range of different technologies like high level languages such as Python to low level languages like C++ as well as use a wide range of frameworks like react or create games using engines like unity.
-				I have a diverse range of knowledge over landscape of coding and want to explore even deeper.
-			</p>
-			<p>
-				During my time working with these tool I’ve also picked up other skills like design and graphic design leading to developing skills with in tools adobe space of tools.
-			</p>
+				<p>
+					Hello! I've worked with various tools to create websites, games and applications, which has given me a diverse skill set.
+					Check out <a href="#skills">my Skills</a> For the list of technologies I've used over my careers, with hopefully more to come.
+				</p>
+				<p>
+					I love learning new tools and creating new software.
+					Learning the ins and outs of new technology is a passion, so I am expanding my interests by doing a Bachelor's in Information and Technology and majoring in computer science.
+				<p/>
+				<p>For any business enquires feel free to contact me  at : <mark>bennjmann.red@gmail.com</mark></p>
 		</div>
+
 		<div class={Styles.sectionContainer} id="projects">
-			<h2>My projects and contributions</h2>
+			<h2>Projects</h2>
 		</div>
 		<div class={Styles.sectionContent}>
 			<Project client:only="react" alt="Project image" title="Cordwells Website"
-					 type="Website" date={new Date()} link="https://cordwells.au/">
+					 type="Website" date={new Date()} link="https://cordwells.au/" src="/images/test.png">
 				This is a Concrete company website featuring many different pages for display of products
 				and about page with featuring a user capturing complex design. Built using Gatsby and Wordpress as the CMS
 			</Project>
 			<Project client:only="react" alt="Project image" title="QCTesting Website"
-					 type="Website" date={new Date()} link="https://qctesting.au/">
+					 type="Website" date={new Date()} link="https://qctesting.au/" src="/images/test.png">
 				This is a basic website featuring a low number of pages and a simplified layout providing the
 				best viewing experience for the user. This website require special feature or required elements for their
 				nata accreditation. Built using Gatsby
 			</Project>
-			<Project client:only="react" alt="Project image" title="Water Testing Application"
-					 type="Web Application" date={new Date()} link="http://localhost:4321/">
+			<Project client:only="react" alt="Project image" title="Water Application"
+					 type="Web Application" date={new Date()} link="http://localhost:4321/" src="/images/test.png">
 				An web application used at QCTesting to keep records of their quarry's water testing built using Next.js
 				in addition to other library's.
 			</Project>
 			<Project client:only="react" alt="Project image" title="Ecommerce Website"
-					 type="Website" date={new Date()} link="http://localhost:4321/" github="./">
+					 type="Website" date={new Date()} link="http://localhost:4321/" github="./" src="/images/test.png">
 				Basic ecommerce website showing off full SEO setup, shopify check out system and dynamic product pages
 				as well as a user friendly layout.
 			</Project>
 		</div>
 
-		<div class={Styles.sectionContainer} id="contact">
-			<h2>My services</h2>
-		</div>
-
-		<div class={Styles.sectionContent}>
-
-			<p>For any enquires business enquires contact me  at : <b>bennjmann.red@gmail.com</b></p>
-		</div>
-
 		<div class={Styles.sectionContainer}>
-			<h2>Skills I've Gathered</h2>
+			<h2>Skills and expertise</h2>
 		</div>
-
+		<p>Below is a List Of technologies, frameworks and coding languages i've used in the past</p>
 		<div class={Styles.sectionContent} id="skills">
-			<p>Below is a List Of technologies, frameworks and coding languages i've used in the past</p>
 			<div class={Styles.skillsContainer}>
 				<Skill title="HTML" src="../../images/HTML5.png" alt="Skill img" rating={100} client:only="react" />
 				<Skill title="CSS" src="../../images/CSS3-logo.png" alt="Skill img" rating={85} client:only="react" />

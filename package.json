@@ -17,13 +17,15 @@
     "astro": "^3.2.3",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
-    "open-props": "^1.6.4",
-    "postcss-preset-env": "^9.2.0",
+    "open-props": "^1.6.10",
+    "postcss-preset-env": "^9.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@csstools/postcss-global-data": "^2.1.0",
     "postcss": "^8.4.31",
-    "postcss-cli": "^10.1.0"
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-media": "^10.0.2"
   }
 }

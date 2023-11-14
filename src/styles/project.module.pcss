@@ -1,47 +1,68 @@
 .container {
     display: flex;
-    width: 700px;
     padding: var(--size-2);
     border-radius: var(--radius-2);
     flex-direction: row;
-    gap: var(--size-3);
+    gap: var(--size-2);
     background: var(--surface-2);
 }
 .container > div { width: 100% }
 
 .title {
+    padding: var(--size-2);
     border-radius: var(--radius-1);
     background: var(--brand);
+    box-shadow: var(--shadow-2);
 }
 
 .descContainer {
-    text-align-last: justify;
-    padding: var(--size-1);
+    padding: 0 var(--size-1);
     height: auto;
 }
 
 .categoriesContainer {
-    padding: var(--size-1) ;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-content: flex-start;
+    border-radius: var(--radius-2);
+    background: var(--surface-1);
+    margin: var(--size-2) 0 var(--size-1) 0;
+    padding: var(--size-1) ;
+    box-shadow: var(--inner-shadow-2);
+}
+
+.categoriesContainer:before {
+    content: ' ';
+    background: var(--surface-2);
+    border-radius: var(--radius-1);
+    height:  75%;
+    width: 1px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%; left: 50%;
 }
 
 .buttonContainer {
+    margin: var(--size-1);
     padding: var(--size-1);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: var(--size-8);
     align-content: center;
 }
 
 .imgContainer {
+    display: none;
     border-radius: var(--radius-2);
-    padding: var(--size-2);
+    padding: var(--size-1);
     background: var(--surface-3);
 }
 .imgContainer > img {
+    height: 100%; width: 100%;
+    border-radius: var(--radius-1);
     object-fit: contain;
 }
 

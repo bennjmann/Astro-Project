@@ -1,5 +1,5 @@
 import React, {type ReactNode} from 'react';
-import Style from "../styles/project.module.css";
+import Style from "../styles/project.module.pcss";
 
 interface Props {
     alt: string;
@@ -18,8 +18,8 @@ const Project = ({alt, children, date, github, link, title, type, src} : Props) 
            <div>
                <h3 className={Style.title}>{title}</h3>
                <div className={Style.categoriesContainer}>
-                   <div>Completion Year:<br/> {date?.toLocaleDateString()}  </div>
-                   <div>Project Type:<br/> {type}</div>
+                   <div>Year:<br/> {date?.toLocaleDateString()}  </div>
+                   <div>Type:<br/> {type}</div>
                </div>
                <div className={Style.descContainer}>
                    {children}
@@ -30,10 +30,11 @@ const Project = ({alt, children, date, github, link, title, type, src} : Props) 
                </div>
            </div>
            <div className={Style.imgContainer}>
-               <img src={src} alt={alt} width={375} height={225}></img>
+               <img src={src} alt={alt} width={375} height={225} loading={"lazy"}></img>
            </div>
        </div>
     );
 };
+
 
 export default Project;
