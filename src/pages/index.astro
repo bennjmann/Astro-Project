@@ -44,10 +44,9 @@ import Header from "../components/Header";
 					best viewing experience for the user. This website require special feature or required elements for their
 					nata accreditation. Built using Gatsby
 				</Project>
-				<Project client:only="react" alt="Project image" title="Water Application"
-						 type="Web Application" date={new Date()} link="http://localhost:4321/" src="/images/test.png">
-					An web application used at QCTesting to keep records of their quarry's water testing built using Next.js
-					in addition to other library's.
+				<Project client:only="react" alt="Project image" title="This Website"
+						 type="Website" date={new Date()} github="https://github.com/bennjmann/Astro-Project" src="/images/test.png">
+					Simple website single page website built using astro, react and open props
 				</Project>
 				<Project client:only="react" alt="Project image" title="Ecommerce Website"
 						 type="Website" date={new Date()} link="http://localhost:4321/" github="./" src="/images/test.png">
@@ -58,25 +57,35 @@ import Header from "../components/Header";
 		</div>
 
 		<div class={Styles.sectionContainer}>
-			<h2>Skills and expertise</h2>
+			<h2>Visual Representation of My Skills</h2>
 		</div>
-		<p>Below is a List Of technologies, frameworks and coding languages i've used in the past</p>
+
 		<div class={Styles.sectionContent} id="skills">
+			<div class={Styles.sectionText}>
+				<p>
+					Ive been programming since i was a kid starting with gamer maker and scratch to now moving on and using technologies like React, typescript, unity and C#.
+					Ive also work as a construction material tester which has given me a me an eye for producing a quality product
+				</p>
+				<p>
+					Below is a look are rating at which i reckon my coding capabilities are at within each technology
+				<p/>
+			</div>
 			<div class={Styles.skillsContainer}>
 				<Skill title="HTML" src="../../images/HTML5.png" alt="Skill img" rating={100} client:only="react" />
-				<Skill title="CSS" src="../../images/CSS3-logo.png" alt="Skill img" rating={85} client:only="react" />
-				<Skill title="JAVASCRIPT" src="../../images/js-logo.png" alt="Skill img" rating={90} client:only="react" />
-				<Skill title="TYPESCRIPT" src="../../images/ts-logo.png" alt="Skill img" rating={80} client:only="react" />
-				<Skill title="C#" src="../../images/Csharp-Logo.png" alt="Skill img" rating={75} client:only="react" />
-				<Skill title="PYTHON" src="../../images/python-icon.png" alt="Skill img" rating={75} client:only="react" />
-				<Skill title="SQL" src="../../images/Sql-logo.png" alt="Skill img" rating={60} client:only="react" />
-				<Skill title="REACT" src="../../images/React-icon.png" alt="Skill img" rating={70} client:only="react" />
-				<Skill title="ASTRO" src="../../images/astro-icon-light.png" alt="Skill img" rating={40} client:only="react" />
-				<Skill title="GATSBY" src="../../images/Gatsby-Monogram.png" alt="Skill img" rating={60} client:only="react" />
-				<Skill title="WORDPRESS" src="../../images/WordPress-logo.png" alt="Skill img" rating={45} client:only="react" />
-				<Skill title="PHOTOSHOP" src="../../images/Photoshop-icon.png" rating={40} client:only="react" />
+				<Skill title="CSS" src="../../images/CSS3-logo.png" alt="Skill img" rating={80} client:only="react" />
+				<Skill title="JAVASCRIPT" src="../../images/js-logo.png" alt="Skill img" rating={80} client:only="react" />
+				<Skill title="TYPESCRIPT" src="../../images/ts-logo.png" alt="Skill img" rating={75} client:only="react" />
+				<Skill title="C#" src="../../images/Csharp-Logo.png" alt="Skill img" rating={70} client:only="react" />
+				<Skill title="PYTHON" src="../../images/python-icon.png" alt="Skill img" rating={60} client:only="react" />
+				<Skill title="SQL" src="../../images/Sql-logo.png" alt="Skill img" rating={70} client:only="react" />
+				<Skill title="REACT" src="../../images/React-icon.png" alt="Skill img" rating={75} client:only="react" />
+				<Skill title="ASTRO" src="../../images/astro-icon-light.png" alt="Skill img" rating={50} client:only="react" />
+				<Skill title="GATSBY" src="../../images/Gatsby-Monogram.png" alt="Skill img" rating={80} client:only="react" />
+				<Skill title="Next.js" src="../../images/Gatsby-Monogram.png" alt="Skill img" rating={75} client:only="react" />
+				<Skill title="WORDPRESS" src="../../images/WordPress-logo.png" alt="Skill img" rating={40} client:only="react" />
+				<Skill title="PHOTOSHOP" src="../../images/Photoshop-icon.png" rating={50} client:only="react" />
 				<Skill title="ILLUSTRATOR" src="../../images/Illustrator-icon.png" alt="Skill img" rating={50} client:only="react" />
-				<Skill title="UNITY" src="../../images/Illustrator-icon.png" alt="Skill img" rating={75} client:only="react" />
+				<Skill title="UNITY" src="../../images/Illustrator-icon.png" alt="Skill img" rating={65} client:only="react" />
 			</div>
 		</div>
 	</main>

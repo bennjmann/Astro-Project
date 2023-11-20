@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from "../styles/skill.module.css"
+import Styles from "../styles/skill.module.pcss"
 import reactIntersectionObserver from "../hooks/reactIntersectionObserver.ts";
 
 interface Props {
@@ -21,13 +21,17 @@ const Skill = ({title, rating, src, alt} : Props) => {
 
     return (
         <div ref={skillContainer} className={Styles.skillContainer}>
-            <img src={src} alt={alt} width="50" height="50" loading="lazy" decoding="async"/>
-            <h5>{title}</h5>
-            <div className={Styles.progressionBar}>
-                <div style={{width:`${rating}%`}}/>
-                <label>beginner</label>
-                <label>intermediate</label>
-                <label>advanced</label>
+            <div className={Styles.skillLogo}>
+                <img src={src} alt={alt} width="50" height="50" loading="lazy" decoding="async"/>
+            </div>
+            <div className={Styles.skillContent}>
+                <h5>{title}</h5>
+                <div className={Styles.progressionBar}>
+                    <div style={{width:`${rating}%`}}/>
+                    <label>beginner</label>
+                    <label>intermediate</label>
+                    <label>advanced</label>
+                </div>
             </div>
         </div>
     );

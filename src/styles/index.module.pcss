@@ -26,7 +26,7 @@ main {
 .sectionContainer > h1 {
     font-size: 8rem;
     line-height: var(--font-lineheight-1);
-    letter-spacing: var(--font-letterspacing-0);
+    letter-spacing: var(--font-letterspacing-1);
 }
 .sectionContainer > div:last-child {
     animation: var(--animation-slide-in-left), var(--animation-fade-out) reverse;
@@ -37,7 +37,7 @@ main {
 .sectionContainer > h2 {
     text-align: left;
     line-height: var(--font-lineheight-1);
-    letter-spacing: var(--font-letterspacing-3);
+    letter-spacing: var(--font-letterspacing-2);
 }
 
 .sectionText {
@@ -56,23 +56,26 @@ main {
 
 .sectionContent {
     display: flex;
+    flex-direction: column;
     justify-content: left;
-    padding: 0 var(--size-2);
 }
 
 .projectsWrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row: auto;
-    gap: var(--size-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-3);
     padding: var(--size-3) 0;
 }
 
+.projectsWrapper > *:nth-child(n) > div {
+
+}
+
 .skillsContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row: auto;
-    gap: var(--size-3);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--size-6);
 }
 
 
@@ -130,11 +133,22 @@ p {
 
 
 
-
 @media (--md-n-below) {
+    main {
+        max-width: calc(100% - 1rem);
+    }
+
     .sectionContainer > h1 {
         font-size: 4rem;
     }
+}
+@media (--sm-n-below) {
+
+    .sectionContainer > h1 {
+        font-size: 3rem;
+        line-height: var(--font-lineheight-1);
+    }
+
     .projectsWrapper {
         grid-template-columns: repeat(1, 1fr);
     }

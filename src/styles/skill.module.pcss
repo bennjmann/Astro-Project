@@ -2,8 +2,21 @@
     padding: 0.3em;
     display: inline-flex;
     flex-direction: row;
-    gap: 1em;
+    gap: var(--size-3);
 }
+
+.skillContainer > .skillContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+}
+.skillContainer > .skillLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 25px; min-height: 25px;
+}
+
 
 h5 {
     margin: auto;
@@ -24,7 +37,7 @@ h5 {
     height: 0.5em;
     background: var(--brand);
 }
-.skillContainer.animate > .progressionBar > div {
+.skillContainer.animate > div > .progressionBar > div {
     animation: Fill-To 3500ms ease-out;
 }
 
@@ -33,7 +46,7 @@ h5 {
     transform: translate(-50%,-50%);
     position: absolute;
 }
-.skillContainer.animate > .progressionBar > label {
+.skillContainer.animate > div > .progressionBar > label {
     animation: var(--animation-fade-in) forwards 250ms;
 }
 
@@ -51,6 +64,8 @@ h5 {
 .progressionBar > label:nth-child(2) { top: -160%; left: 0%;}
 .progressionBar > label:nth-child(3) { top: -160%; left: 50%; animation-delay: 650ms }
 .progressionBar > label:nth-child(4) { top: -160%; left: 99%; animation-delay: 1300ms}
+
+
 
 
 @keyframes Fill-To {

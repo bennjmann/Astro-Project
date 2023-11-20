@@ -1,5 +1,7 @@
 ---
-import '../styles/global.css'
+import '../styles/global.pcss'
+
+import { StrictMode } from 'react';
 
 /* the props */
 import "open-props/style";
@@ -30,7 +32,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<StrictMode>
+			<slot />
+		</StrictMode>
 	</body>
 </html>
 
