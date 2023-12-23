@@ -4,11 +4,14 @@ import Styles from '../styles/header.module.css';
 
 const Header = () => {
     return (
-        <nav className={Styles.headerContainer}>
-            <a href={'#about'}><b>About</b></a>
-            <a href={'#projects'}><b>Projects</b></a>
-            <a href={'#skills'}><b>Skills</b></a>
-        </nav>
+        <div className={"container"}>
+            <nav className={` ${Styles.headerContainer}`}>
+                <a href={'#about'}>About</a>
+                <a href={'#projects'}>Projects</a>
+                <a href={'#skills'}>Skills</a>
+                <a href={'#skills'}>Skills</a>
+            </nav>
+        </div>
     );
 };
 

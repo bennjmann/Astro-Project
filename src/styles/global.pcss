@@ -1,10 +1,16 @@
 @media (--OSlight) {
     :root {
         --brand: #2685f2;
+        --secondary: #C7CFF0;
+        --accent: #41B4B4;
+
+        --sucess: #4EDF4E;
+        --failed: #E44949;
+        --disabled: #E6E6E6;
 
         --text-1: #030921;
 
-        --surface-1: #ffffff;
+        --surface-1: #DDDDDF;
         --surface-2: #d5d7de;
 
     }
@@ -13,6 +19,12 @@
 @media (--OSdark) {
     :root {
         --brand: #2685f2;
+        --secondary: #C7CFF0;
+        --accent: #41B4B4;;
+
+        --sucess: #20B120;
+        --failed: #B61B1B;
+        --disabled: #1A1A1A;
 
         --text-1: #dee4fc;
 
@@ -24,10 +36,9 @@
 
 
 body, p {
+    font-family: Merriweather,'Sarala', serif;
     color: var(--text-1);
-    font-family: 'Sarala', serif;
     font-weight: 400;
-    font-size: 0.875rem;
 }
 
 p > a, p > a:visited {
@@ -37,8 +48,8 @@ p > a, p > a:visited {
 
 h1, h2, h3, h4, h5 {
     color: var(--text-1);
-    font-family: 'Amaranth', serif;
-    font-weight: 800;
+    font-family: "Work Sans", 'Amaranth', serif;
+    font-weight: bold;
 }
 
 html {font-size: 100%;} /* 16px */
@@ -56,14 +67,9 @@ h5 {font-size: 1.414rem; /* 22.56px */}
 small {font-size: 0.707rem; /* 11.36px */}
 
 button {
-    background-color: var(--brand);
-    border: var(--border-size-2) solid var(--blue-5);
+    max-height: 50px;
 }
 
-button:active {
-    animation: var(--animation-scale-down);
-    animation-duration: 250ms;
-}
 mark {
     background: var(--brand);
     color: white;
@@ -82,4 +88,26 @@ mark {
 
     small {font-size: 0.707rem; /* 11.36px */}
 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [full-width-start] 3.5rem [content-start] 1fr 1fr [content-mid] 1fr 1fr [content-end] 3.5rem [full-width-end];
+    gap: 3rem;
+}
+
+.container > * {
+    grid-column: content;
+}
+
+.container .content {
+    grid-column: content;
+}
+
+.container .area-one {
+    grid-column: content-start / content-mid;
+}
+
+.container .area-two {
+    grid-column: content-mid / content-end;
 }

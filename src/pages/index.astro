@@ -2,91 +2,68 @@
 import Styles from "../styles/index.module.pcss"
 import Layout from '../layouts/Layout.astro';
 import AnimateString from "../components/animateString";
-import Skill from "../components/Skill"
-import Project from "../components/Project";
 import Header from "../components/Header";
+
+import Project from "../components/Project"
 ---
 
 <Layout title="Bennjmann Redman">
 	<main>
 		<Header/>
-		<div class={Styles.sectionContainer} id="about">
-			<div>My name is</div>
-			<h1> <AnimateString client:only="react" className={Styles.firstName}  text="Ben"/>&nbsp;<AnimateString client:only="react" className={Styles.lastName} text="Redman"/></h1>
-			<div>I am a Developer</div>
-		</div>
-
-		<div class={Styles.sectionText}>
-				<p>
-					Hello! I've worked with various tools to create websites, games and applications, which has given me a diverse skill set.
-					Check out <a href="#skills">my Skills</a> For the list of technologies I've used over my careers, with hopefully more to come.
-				</p>
-				<p>
-					I love learning new tools and creating new software.
-					Learning the ins and outs of new technology is a passion, so I am expanding my interests by doing a Bachelor's in Information and Technology and majoring in computer science.
-				<p/>
-				<p>For any business enquires feel free to contact me  at : <mark>bennjmann.red@gmail.com</mark></p>
-		</div>
-
-		<div class={Styles.sectionContainer} id="projects">
-			<h2>Projects</h2>
-		</div>
-		<div class={Styles.sectionContent}>
-			<div class={Styles.projectsWrapper}>
-				<Project client:only="react" alt="Project image" title="Cordwells Website"
-						 type="Website" date={new Date()} link="https://cordwells.au/" src="/images/test.png">
-					This is a Concrete company website featuring many different pages for display of products
-					and about page with featuring a user capturing complex design. Built using Gatsby and Wordpress as the CMS
-				</Project>
-				<Project client:only="react" alt="Project image" title="QCTesting Website"
-						 type="Website" date={new Date()} link="https://qctesting.au/" src="/images/test.png">
-					This is a basic website featuring a low number of pages and a simplified layout providing the
-					best viewing experience for the user. This website require special feature or required elements for their
-					nata accreditation. Built using Gatsby
-				</Project>
-				<Project client:only="react" alt="Project image" title="This Website"
-						 type="Website" date={new Date()} github="https://github.com/bennjmann/Astro-Project" src="/images/test.png">
-					Simple website single page website built using astro, react and open props
-				</Project>
-				<Project client:only="react" alt="Project image" title="Ecommerce Website"
-						 type="Website" date={new Date()} link="http://localhost:4321/" github="./" src="/images/test.png">
-					Basic ecommerce website showing off full SEO setup, shopify check out system and dynamic product pages
-					as well as a user friendly layout.
-				</Project>
+		<div id="hero" class={`container ${Styles.HeroContainer}`}>
+			<div class={Styles.blurredColour}>
+				<div/>
+				<div/>
+			</div>
+			<div>
+				<h1> <AnimateString client:only="react" className={Styles.firstName}  text="Bennjmann"/>
+					<br/>
+					<AnimateString client:only="react" className={Styles.lastName} text="Redman"/></h1>
+				<p>I am a Developer</p>
+			</div>
+			<div>
+				<button>Resume</button>
+				<button>Contact me</button>
 			</div>
 		</div>
 
-		<div class={Styles.sectionContainer}>
-			<h2>Visual Representation of My Skills</h2>
+		<div id="about" class={`container ${Styles.introduction}`}>
+				<div class={`area-one ${Styles.boxes}`}>
+					<h2>Hello, call me Ben for short</h2>
+					<div/>
+					<div/>
+					<div/>
+				</div>
+				<div class=`area-two ${Styles.about}`>
+					<h3>About Me</h3>
+					<p>
+						Hello, my name is Bennjmann. You can call me Ben for short. I am a web developer from Sunshine Coast, QLD, and I am currently studying for a bachelor of information technology majoring in computer science at QUT.
+					</p>
+					<p>
+						I've been using and creating with technology since I was a kid. It has become a passion and hobby, and I enjoy every bit of the process. I started my journey by making games in engines like Gamer Maker and Scratch.
+						These sparked my interest in technology, and so I expanded my knowledge in the technology field by doing a Cert 3 in information and technology and a Cert 2 in Creative Industries at AIE.
+						during this period I worked as a full-time construction material tester, which helped to expand my communication skills and gain an eye for producing quality results. Additionally, I gained a Cert 3 in Construction Material Testing.
+						Now leading to my current day job of working as a web developer for the past 2 years and starting my studies for a bachelor's in Information and Technology, majoring in Computer Science  at QUT
+					</p>
+					<p>
+						For a list of the skills i've gain throughout my studies and career Click Here
+					</p>
+				</div>
 		</div>
 
-		<div class={Styles.sectionContent} id="skills">
-			<div class={Styles.sectionText}>
-				<p>
-					Ive been programming since i was a kid starting with gamer maker and scratch to now moving on and using technologies like React, typescript, unity and C#.
-					Ive also work as a construction material tester which has given me a me an eye for producing a quality product
-				</p>
-				<p>
-					Below is a look are rating at which i reckon my coding capabilities are at within each technology
-				<p/>
-			</div>
-			<div class={Styles.skillsContainer}>
-				<Skill title="HTML" src="../../images/HTML5.png" alt="Skill img" rating={100} client:only="react" />
-				<Skill title="CSS" src="../../images/CSS3-logo.png" alt="Skill img" rating={80} client:only="react" />
-				<Skill title="JAVASCRIPT" src="../../images/js-logo.png" alt="Skill img" rating={80} client:only="react" />
-				<Skill title="TYPESCRIPT" src="../../images/ts-logo.png" alt="Skill img" rating={75} client:only="react" />
-				<Skill title="C#" src="../../images/Csharp-Logo.png" alt="Skill img" rating={70} client:only="react" />
-				<Skill title="PYTHON" src="../../images/python-icon.png" alt="Skill img" rating={60} client:only="react" />
-				<Skill title="SQL" src="../../images/Sql-logo.png" alt="Skill img" rating={70} client:only="react" />
-				<Skill title="REACT" src="../../images/React-icon.png" alt="Skill img" rating={75} client:only="react" />
-				<Skill title="ASTRO" src="../../images/astro-icon-light.png" alt="Skill img" rating={50} client:only="react" />
-				<Skill title="GATSBY" src="../../images/Gatsby-Monogram.png" alt="Skill img" rating={80} client:only="react" />
-				<Skill title="Next.js" src="../../images/Gatsby-Monogram.png" alt="Skill img" rating={75} client:only="react" />
-				<Skill title="WORDPRESS" src="../../images/WordPress-logo.png" alt="Skill img" rating={40} client:only="react" />
-				<Skill title="PHOTOSHOP" src="../../images/Photoshop-icon.png" rating={50} client:only="react" />
-				<Skill title="ILLUSTRATOR" src="../../images/Illustrator-icon.png" alt="Skill img" rating={50} client:only="react" />
-				<Skill title="UNITY" src="../../images/Illustrator-icon.png" alt="Skill img" rating={65} client:only="react" />
+		<div id="projects" class=`container ${Styles.projects}`>
+			<h2>PROJECTS</h2>
+			<div>
+				<Project/>
 			</div>
 		</div>
+
+		<div id="skills" class=`container ${Styles.projects}`>
+			<h2>SKILLS</h2>
+			<div>
+
+			</div>
+		</div>
+
 	</main>
 </Layout>
