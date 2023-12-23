@@ -41,9 +41,15 @@ body, p {
     font-weight: 400;
 }
 
-p > a, p > a:visited {
-    background: none;
+a:hover, a:visited:hover {
+    cursor: pointer;
+    text-decoration: underline;
     color: var(--brand);
+    text-decoration-color: var(--brand);
+}
+
+a:visited {
+    color: var(--secondary);
 }
 
 h1, h2, h3, h4, h5 {

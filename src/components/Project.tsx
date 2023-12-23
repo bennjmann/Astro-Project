@@ -16,15 +16,15 @@ const Project = ({alt, children, date, github, link, title, type, src} : Props) 
     return (
         <div className={Style.container}>
             <div className={Style.imgContainer}>
-                <img src={src} alt={alt} width={375} height={225} loading={"lazy"}></img>
+                <img src={src} alt={alt} width={225} height={150} loading={"lazy"}></img>
             </div>
-            <div>
-                <h3>Project Title</h3>
-                <ul>
-                    <li>Filter :</li>
-                    <li>Filter :</li>
+            <div className={Style.information}>
+                <h3><a href={link}>{title ?? "Project Title"}</a></h3>
+                <ul className={Style.tags}>
+                    <li>Type : {type ?? "Unknown"}</li>
+                    <li>Date: {date?.getFullYear() ?? "2000"}</li>
                 </ul>
-                <p>Project Desc</p>
+                <p>{children ?? "Project Desc"}</p>
             </div>
 
         </div>

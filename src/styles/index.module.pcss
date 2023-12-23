@@ -47,7 +47,7 @@
 }
 
 .introduction {
-    padding: 3rem 0rem;
+    padding: 3rem 0;
     background: #212123;
     &>div {
         flex-basis: 50%;
@@ -74,7 +74,6 @@
     align-items: center;
 
     &> div {
-
         margin-bottom: -6rem;
         border-radius: 12px;
         background: linear-gradient(180deg, var(--brand) 0%, rgba(0, 0, 0, 0.00) 100%);
@@ -103,7 +102,16 @@
 }
 
 .projects {
+    padding: 3rem 0;
 
+    &> div {
+        display: grid;
+        grid-template-columns: subgrid;
+        row-gap: var(--size-9);
+        &> div {
+            grid-column: span 2;
+        }
+    }
 }
 
 
