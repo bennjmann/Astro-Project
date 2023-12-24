@@ -1,0 +1,18 @@
+.footer {
+    padding: 6rem 0;
+    background: var(--surface-2);
+
+    & > nav {
+        display: flex;
+        flex-direction: column;
+    }
+    & > nav:first-child {
+        grid-column: content-start / 3;
+    }
+    & > nav:nth-child(2) {
+        grid-column: 3 / content-mid;
+    }
+    & > nav:last-child {
+        grid-column: content-mid;
+    }
+}

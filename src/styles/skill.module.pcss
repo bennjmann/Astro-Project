@@ -1,78 +1,40 @@
-.skillContainer {
-    padding: 0.3em;
-    display: inline-flex;
+.container {
+    max-height: 50px;
+    max-width: 255px;
+    display: flex;
     flex-direction: row;
     gap: var(--size-3);
-}
-
-.skillContainer > .skillContent {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-5);
-}
-.skillContainer > .skillLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 25px; min-height: 25px;
-}
-
-
-h5 {
-    margin: auto;
-    width: auto;
-}
-
-.progressionBar {
-    position: relative;
-    margin: auto 1.5em;
-    outline: var(--surface-3) solid 3px;
-    border-radius: var(--radius-2);
-    height: 0.5em; min-width: 250px;
-    background: var(--surface-4);
-}
-
-.progressionBar > div {
-    border-radius: var(--radius-2);
-    height: 0.5em;
-    background: var(--brand);
-}
-.skillContainer.animate > div > .progressionBar > div {
-    animation: Fill-To 3500ms ease-out;
-}
-
-.progressionBar > label {
-    opacity: 0;
-    transform: translate(-50%,-50%);
-    position: absolute;
-}
-.skillContainer.animate > div > .progressionBar > label {
-    animation: var(--animation-fade-in) forwards 250ms;
-}
-
-.progressionBar > label:before {
-    content: '';
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    width: 2px;
-    height: 25%;
-    border-radius: var(--radius-1);
-    background: var(--surface-3);
-}
-
-.progressionBar > label:nth-child(2) { top: -160%; left: 0%;}
-.progressionBar > label:nth-child(3) { top: -160%; left: 50%; animation-delay: 650ms }
-.progressionBar > label:nth-child(4) { top: -160%; left: 99%; animation-delay: 1300ms}
-
-
-
-
-@keyframes Fill-To {
-    0% {
-        max-width: 10px;
+    & h3 {
+        font-size: var(--font-size-3);
     }
-    100% {
-        max-width: 100%;
+}
+
+.img {
+    min-width: 45px;
+}
+
+.rating {
+    display: inline-flex;
+    gap: var(--size-2);
+    flex: 1;
+    & > div {
+        border: 1px solid var(--brand) ;
+        position: relative;
+        height: var(--size-3);
+        width: var(--size-7);
     }
+
+    & > div:first-child:before {
+        content:'Beginner';
+        font-size: var(--font-size-0);
+        position: absolute;
+        top: 110%;
+    }
+    & > div:last-child:before {
+        content:'Advance';
+        font-size: var(--font-size-0);
+        position: absolute;
+        top: 110%; left: -65%;
+    }
+
 }

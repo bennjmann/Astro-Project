@@ -15,9 +15,7 @@ interface Props {
 const Project = ({alt, children, date, github, link, title, type, src} : Props) => {
     return (
         <div className={Style.container}>
-            <div className={Style.imgContainer}>
-                <img src={src} alt={alt} width={225} height={150} loading={"lazy"}></img>
-            </div>
+            <img className={Style.img} src={src} alt={alt} width={225} height={150} loading={"lazy"}></img>
             <div className={Style.information}>
                 <h3><a href={link}>{title ?? "Project Title"}</a></h3>
                 <ul className={Style.tags}>
