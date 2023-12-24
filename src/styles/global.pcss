@@ -51,6 +51,7 @@
 
 }
 
+
 body, p {
     scroll-behavior: smooth;
     font-family: Merriweather,'Sarala', serif;
@@ -98,25 +99,12 @@ mark {
     color: white;
 }
 
-@media (--md-n-below) {
-    h1 {font-size: 3.997rem; /* 64px */}
 
-    h2 {font-size: 2.827rem; /* 45.28px */}
-
-    h3 {font-size: 1.999rem; /* 32px */}
-
-    h4 {font-size: 1.414rem; /* 22.56px */}
-
-    h5 {font-size: 1rem; /* 16px */}
-
-    small {font-size: 0.707rem; /* 11.36px */}
-
-}
 
 .container {
     display: grid;
-    grid-template-columns: [full-width-start] 3.5rem [content-start] 1fr 1fr [content-mid] 1fr 1fr [content-end] 3.5rem [full-width-end];
-    gap: 3rem;
+    grid-template-columns: [full-width-start] min(3.5%, 3.5rem) [content-start] 1fr 1fr [content-mid] 1fr 1fr [content-end] min(3.5%, 3.5rem) [full-width-end];
+    gap: min(3%,3rem);
 }
 
 .container > * {
@@ -133,4 +121,28 @@ mark {
 
 .container .area-two {
     grid-column: content-mid / content-end;
+}
+
+@media (--md-n-below) {
+
+    .container .area-one {
+        grid-column: content;
+    }
+
+    .container .area-two {
+        grid-column: content;
+    }
+
+    h1 {font-size: 3.997rem; /* 64px */}
+
+    h2 {font-size: 2.827rem; /* 45.28px */}
+
+    h3 {font-size: 1.999rem; /* 32px */}
+
+    h4 {font-size: 1.414rem; /* 22.56px */}
+
+    h5 {font-size: 1rem; /* 16px */}
+
+    small {font-size: 0.707rem; /* 11.36px */}
+
 }

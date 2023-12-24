@@ -1,11 +1,15 @@
 
 .container {
+    container-name: project;
+    container-type: inline-size;
     max-width: 592px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: left;
-    gap: 1rem;
+    & > div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: left;
+        gap: 1rem;
+    }
 
     & h3 {
         font-size: var(--font-size-5);
@@ -31,7 +35,6 @@
 
 .information {
     flex: auto;
-    height: 100%;
 }
 
 .tags {
@@ -44,5 +47,11 @@
     gap: var(--size-6);
     &> li {
         padding: 0;
+    }
+}
+
+@container project (width < 525px) {
+    .container > div {
+        flex-direction: column;
     }
 }

@@ -15,3 +15,11 @@
 }
 .headerContainer > a:hover, .headerContainer > a:visited:hover  { color: var(--brand); }
 .headerContainer > a:visited {  color:var(--text-1); }
+
+
+@media (max-width: 768px) {
+    .headerContainer {
+        grid-column: content;
+        gap: 1rem;
+    }
+}

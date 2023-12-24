@@ -15,16 +15,17 @@ interface Props {
 const Project = ({alt, children, date, github, link, title, type, src} : Props) => {
     return (
         <div className={Style.container}>
-            <img className={Style.img} src={src} alt={alt} width={225} height={150} loading={"lazy"}></img>
-            <div className={Style.information}>
-                <h3><a href={link}>{title ?? "Project Title"}</a></h3>
-                <ul className={Style.tags}>
-                    <li>Type : {type ?? "Unknown"}</li>
-                    <li>Date: {date?.getFullYear() ?? "2000"}</li>
-                </ul>
-                <p>{children ?? "Project Desc"}</p>
+            <div>
+                <img className={Style.img} src={src} alt={alt} width={225} height={150} loading={"lazy"}></img>
+                <div className={Style.information}>
+                    <h3><a href={link}>{title ?? "Project Title"}</a></h3>
+                    <ul className={Style.tags}>
+                        <li>Type : {type ?? "Unknown"}</li>
+                        <li>Date: {date?.getFullYear() ?? "2000"}</li>
+                    </ul>
+                    <p>{children ?? "Project Desc"}</p>
+                </div>
             </div>
-
         </div>
     );
 };

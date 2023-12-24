@@ -2,7 +2,7 @@
 .HeroContainer {
     position: relative;
     padding: 6rem 0;
-    min-height: 100dvh;
+    min-height: calc(100dvh - 6rem);
 
     & > div:last-child {
         display: inline-flex;
@@ -47,6 +47,7 @@
 }
 
 .introduction {
+    overflow: hidden;
     padding: 6rem 0;
     background: #212123;
     &>div {
@@ -187,26 +188,95 @@
 
 
 
-@media (--md-n-below) {
-    main {
-        max-width: calc(100% - 1rem);
+@media (max-width: 1024px) {
+    .HeroContainer {
+        padding: 4rem 0;
+        min-height: calc(100dvh - 4rem);
+        & h1 {
+            font-size: var(--size-fluid-6);
+        }
     }
 
-    .sectionContainer > h1 {
-        font-size: 4rem;
+    .introduction {
+        padding: 4rem 0;
+    }
+
+    .boxes {
+        display: none;
+
+    }
+
+    .about {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .projects {
+        padding: 4rem 0;
+    }
+
+    .skills {
+        padding: 4rem 0;
+        & .skillGrid {
+            & h3 {
+                grid-column: span 1;
+            }
+        }
+    }
+
+    .contact {
+        padding: 4rem 0;
     }
 }
-@media (--sm-n-below) {
 
-    .sectionContainer > h1 {
-        font-size: 3rem;
-        line-height: var(--font-lineheight-1);
+@media (max-width: 768px) {
+    .HeroContainer {
+        & h1 {
+            font-size: var(--size-fluid-5);
+        }
+
+        & p {
+            font-size: var(--size-fluid-3);
+        }
     }
 
-    .projectsWrapper {
-        grid-template-columns: repeat(1, 1fr);
+    .projects {
+        padding: 6rem 0;
+
+        &> div {
+            display: grid;
+            grid-template-columns: subgrid;
+            gap: var(--size-9);
+            &> div {
+                grid-column: span 4;
+            }
+        }
     }
-    .skillsContainer {
-        grid-template-columns: repeat(1, 1fr);
+
+    .blurredColour {
+        grid-column: 2/4;
+        justify-self: center;
+        position: absolute;
+        top: 40%;
+        transform: translate(0, -50%);
+        background: var(--brand);
+        width: 22rem;
+        height: 22rem;
+        filter: blur(153px) opacity(50%);
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .HeroContainer {
+        & h1 {
+            font-size: var(--size-fluid-4);
+        }
+
+        & p {
+            font-size: var(--size-fluid-2);
+        }
     }
 }
