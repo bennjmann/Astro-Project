@@ -23,7 +23,7 @@ import Skill from "../components/Skill"
 			</div>
 			<div>
 				<button>Resume</button>
-				<button>Contact me</button>
+				<button onclick="location.href = '#contact'">Contact me</button>
 			</div>
 		</div>
 
@@ -54,17 +54,17 @@ import Skill from "../components/Skill"
 		<div id="projects" class=`container ${Styles.projects}`>
 			<h2>PROJECTS</h2>
 			<div>
-				<Project title="Cordwells Concrete" type="Gatsby"
+				<Project title="Cordwells Concrete" type="Gatsby" link="https://cordwells.au/"
 						 src="/images/Cordwells-Website.png" alt="Screen Shot of the Cordwells Concrete Website">
 					A Seven page website made for a Concrete Company located on the Sunshine Coast.
 				</Project>
-				<Project title="QCTesting" type="Gatsby">
+				<Project title="QCTesting" type="Gatsby" link="#contact">
 					A Four Page website made a Construction Testing Company located on the Sunshine Coast.
 				</Project>
-				<Project title="CleanToDay" type="Next.js">
+				<Project title="CleanToDay" type="Next.js" link="#contact">
 					A Seven Page website made for a Cleaning Company located in the Sunshine Coast.
 				</Project>
-				<Project title="This Website" type="Astro">
+				<Project title="This Website" type="Astro" link="#contact">
 					A Single Page Application website made as a portfolio for myself to display my work and experience.
 				</Project>
 
@@ -119,7 +119,7 @@ import Skill from "../components/Skill"
 				</div>
 			</div>
 		</div>
-		<div class=`container ${Styles.contact}`>
+		<div id="contact" class=`container ${Styles.contact}`>
 			<h2>Contact</h2>
 			<img class="area-one" src=""  width="500" height="500"/>
 			<div class="area-two">
