@@ -116,6 +116,17 @@
 
 .skills {
     padding: 6rem 0;
+    & > h2 {
+        position: relative;
+    }
+    & > h2:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        background: var(--brand);
+        height: 10px;
+        width: 100%;
+    }
     & .skillGrid {
         padding: 3rem 0;
         display: grid;
