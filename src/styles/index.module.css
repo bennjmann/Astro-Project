@@ -129,7 +129,7 @@
 }
 
 .about {
-
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -150,6 +150,7 @@
 }
 
 .projects {
+    overflow: hidden;
     padding: 6rem 0;
     & > h2 {
       margin-bottom: var(--size-7) ;
@@ -185,6 +186,7 @@
 }
 
 .skills {
+    overflow: hidden;
     padding: 6rem 0;
     & > h2 {
         position: relative;
@@ -212,6 +214,7 @@
 }
 
 .contact {
+    overflow: hidden;
     background: var(--surface-2);
     padding: 6rem 0;
 
