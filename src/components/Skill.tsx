@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useRef} from 'react';
-import Styles from "../styles/skill.module.pcss"
-import reactIntersectionObserver from "../hooks/reactIntersectionObserver.ts";
+import Styles from "../styles/skill.module.css"
+import reactIntersectionObserver from "../../../../astro/my-app/src/hooks/reactIntersectionObserver.ts";
 
 interface Props {
     title: string;

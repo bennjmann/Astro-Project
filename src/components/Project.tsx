@@ -1,5 +1,5 @@
 import React, {type ReactNode} from 'react';
-import Style from "../styles/project.module.pcss";
+import Style from "../styles/project.module.css";
 
 interface Props {
     alt: string;

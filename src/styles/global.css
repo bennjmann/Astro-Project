@@ -59,15 +59,44 @@ body, p {
     font-weight: 400;
 }
 
-a:hover, a:visited:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    color: var(--brand);
-    text-decoration-color: var(--brand);
+a {
+    &:is( :hover,:visited:hover) {
+        cursor: pointer;
+        text-decoration: underline;
+        color: var(--brand);
+        text-decoration-color: var(--brand);
+    }
 }
 
 a:visited {
-    color: var(--secondary);
+    color: var(--accent);
+}
+
+button {
+    font-family: "Work Sans", 'Amaranth', serif;
+    font-weight: bold;
+    color: white;
+    box-shadow: none;
+    border-color: var(--secondary);
+    text-shadow: var(--secondary);
+    background: none;
+    &:is(:hover, :focus) {
+        cursor: pointer;
+        color: var(--blue-0);
+        background-color: var(--accent);
+        border-color: var(--accent);
+    }
+
+}
+
+button.primary {
+    border-color: var(--secondary);
+    background: var(--brand);
+    color: white;
+    &:is(:hover, :focus) {
+        border-color: var(--accent);
+        background-color: var(--accent);
+    }
 }
 
 h1, h2, h3, h4, h5 {
@@ -90,9 +119,7 @@ h5 {font-size: 1.414rem; /* 22.56px */}
 
 small {font-size: 0.707rem; /* 11.36px */}
 
-button {
-    max-height: 50px;
-}
+
 
 mark {
     background: var(--brand);

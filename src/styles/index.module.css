@@ -4,18 +4,28 @@
     padding: 6rem 0;
     min-height: calc(100dvh - 6rem);
 
-    & > div:last-child {
-        display: inline-flex;
-        gap: 2rem;
+    & h1 {
+        color: var(--brand);
+        font-size: var(--size-fluid-6);
     }
 
-    & h1 {
-        font-size: var(--size-fluid-7);
-    }
     & p {
         font-size: var(--size-fluid-3);
     }
+
 }
+
+.heroInformation {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-fluid-8);
+    &> div:last-child {
+        display: flex;
+        flex-direction: row;
+        gap: var(--size-fluid-4);
+    }
+}
+
 
 .blurredColour {
     grid-column: 4/6;
@@ -46,11 +56,14 @@
 
 }
 
+
 .introduction {
-    overflow: hidden;
     padding: 6rem 0;
+    display: flex;
+    overflow: hidden;
+
     background: #212123;
-    &>div {
+    & > div {
         flex-basis: 50%;
     }
     & h2 {
@@ -62,7 +75,7 @@
         letter-spacing: -0.025em;
     }
     & p {
-        line-height: 1.5em;
+        line-height: var(--font-lineheight-4);
         max-width: 600px;
     }
 }
@@ -74,7 +87,7 @@
     justify-content: right;
     align-items: center;
 
-    &> div {
+    & > div {
         margin-bottom: -6rem;
         border-radius: 12px;
         background: linear-gradient(180deg, var(--brand) 0%, rgba(0, 0, 0, 0.00) 100%);
@@ -93,13 +106,44 @@
         background: linear-gradient(180deg, var(--accent) 0%, rgba(0, 0, 0, 0.00) 100%);
         height: 200px;
         width: 300px;
+
+    }
+}
+
+.animate .boxes {
+
+    &> h2 {
+        animation: var(--animation-slide-in-up);
+        animation-timing-function: var(--ease-1);
+        animation-duration: 750ms;
+    }
+
+    &> div {
+        animation: var(--animation-slide-in-up);
+        animation-timing-function: var(--ease-1);
+        animation-duration: 750ms;
     }
 }
 
 .about {
+
     display: flex;
     flex-direction: column;
     gap: 16px;
+    &> p, h3 {
+        opacity: 0;
+    }
+}
+
+.animate .about{
+    animation: var(--animation-slide-in-up);
+    animation-timing-function: var(--ease-1);
+    animation-duration: 1.25s;
+    & > p, h3 {
+        animation:  var(--animation-fade-in) forwards;
+        animation-timing-function: var(--ease-1);
+        animation-duration: 2s;
+    }
 }
 
 .projects {
@@ -245,6 +289,7 @@
             font-size: var(--size-fluid-3);
         }
     }
+
 
     .projects {
         padding: 6rem 0;
