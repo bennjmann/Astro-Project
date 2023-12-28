@@ -1,6 +1,6 @@
 'use client'
 import React, {type ReactNode, useEffect, useRef} from 'react';
-import reactIntersectionObserver from "../../../../astro/my-app/src/hooks/reactIntersectionObserver.ts";
+import reactIntersectionObserver from "@/hooks/reactIntersectionObserver";
 
 
 
