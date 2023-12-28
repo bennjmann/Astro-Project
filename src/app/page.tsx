@@ -51,10 +51,10 @@ export default function Home() {
           I developed a keen eye for generating quick, high-quality, and accurate results, greatly benefiting my applications.
         </p>
         <p>
-          Now I am currently working as a full-stack developer, creating websites while pursuing a bachelor's degree in Information Technology at QUT.
+          Now I am currently working as a full-stack developer, creating websites while pursuing a bachelor&apos;s degree in Information Technology at QUT.
         </p>
         <p>
-          For a <a href="#skills"><u>list of the skills</u></a> i've gain throughout my studies and career.
+          For a <a href="#skills"><u>list of the skills</u></a> i&apos;ve gain throughout my studies and career.
         </p>
         </div>
       </AnimationWrapper>
