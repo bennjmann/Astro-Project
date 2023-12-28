@@ -1,6 +1,6 @@
 .footer {
     padding: 6rem 0;
-    background: var(--surface-2);
+    background: var(--surface-1);
 
     & > nav {
         display: flex;

@@ -68,10 +68,6 @@ a {
     }
 }
 
-a:visited {
-    color: var(--accent);
-}
-
 button {
     font-family: "Work Sans", 'Amaranth', serif;
     font-weight: bold;

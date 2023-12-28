@@ -6,11 +6,12 @@ const ReactIntersectionObserver = (ref : RefObject<HTMLDivElement>) => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setOnScreen(entry.isIntersecting)
-            }, {}
+            }, {
+                rootMargin: '-200px',
+            }
         )
 
         ref.current && observer.observe(ref.current);
-
         // @ts-ignore
         return () => observer.unobserve(ref.current);
     })
