@@ -1,21 +1,22 @@
 import React from 'react';
 
 import Styles from '../styles/footer.module.css';
+import Link from "next/link";
 
 const Footer = () => {
     return (
         <div className={`container ${Styles.footer}`}>
             <nav>
                 <h4>Quick Links</h4>
-                <a href={'#about'}>About</a>
-                <a href={'#projects'}>Projects</a>
-                <a href={'#skills'}>Skills</a>
-                <a href={'#contact'}>Contact</a>
+                <Link href={'#about'}>About</Link>
+                <Link href={'#projects'}>Projects</Link>
+                <Link href={'#skills'}>Skills</Link>
+                <Link href={'#contact'}>Contact</Link>
             </nav>
             <nav>
                 <h4>Socials</h4>
-                <a href={'#about'}>Linkedin</a>
-                <a href={'#projects'}>Youtube</a>
+                <a href={'https://www.linkedin.com/in/ben-redman-b68561216/'}>Linkedin</a>
+                <a href={'https://www.youtube.com/channel/UCiMHyUqcXw8S9HRtptGaH-g'}>Youtube</a>
             </nav>
             <nav>
                 <h4>Contact Me</h4>

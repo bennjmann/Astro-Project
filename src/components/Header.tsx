@@ -1,15 +1,16 @@
 import React from 'react';
 
 import Styles from '../styles/header.module.css';
+import Link from "next/link";
 
 const Header = () => {
     return (
         <div className={"container"}>
             <nav className={` ${Styles.headerContainer}`}>
-                <a href={'#about'}>About</a>
-                <a href={'#projects'}>Projects</a>
-                <a href={'#skills'}>Skills</a>
-                <a href={'#contact'}>Contact</a>
+                <Link href={'#about'}>About</Link>
+                <Link href={'#projects'}>Projects</Link>
+                <Link href={'#skills'}>Skills</Link>
+                <Link href={'#contact'}>Contact</Link>
             </nav>
         </div>
     );

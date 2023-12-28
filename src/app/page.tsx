@@ -12,7 +12,7 @@ export default function Home() {
           <div className={`${Styles.heroInformation}`}>
           <div>
             <h1>Bennjmann<br/>Redman</h1>
-            <p>Helping to develop projects for the future</p>
+            <p>Empowering the Future through Project Development</p>
           </div>
           <div>
             <button className="primary">Resume</button>
@@ -69,13 +69,13 @@ export default function Home() {
 				  </Project>
 				  <Project title="QCTesting" type="Gatsby" link="https://QCTesting.au/"
 						   src="/images/WP.png" alt="Photo of the Homepage of QCTesting">
-					  A Four Page website made a Construction Testing Company located on the Sunshine Coast.
+					  Work in Progress....
 				  </Project>
 				  <Project title="CleanToDay" type="Next.js" link="#contact"
 						   src="/images/WP.png" alt="A photo of the CleanToday Homepage">
-					  A Seven Page website made for a Cleaning Company located in the Sunshine Coast.
+					  Work in Progress....
 				  </Project>
-				  <Project title="This Website" type="Astro" link="/"
+				  <Project title="This Website" type="Next.js" link="/"
 						   src="/images/Portfoilo-Wesite.png" alt="A photo of the Homepage of this website">
 					  A Single Page Application website made as a portfolio for myself to display my work and experience.
 				  </Project>
