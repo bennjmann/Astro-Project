@@ -15,6 +15,8 @@ import "@fontsource/merriweather";
 
 import Header from "@/components/Header";
 import Footer from '@/components/Footer';
+import NotificationProvider from "@/providers/NotificationProvider";
+import Notification from "@/components/Notification";
 
 
 export const metadata: Metadata = {
@@ -29,11 +31,14 @@ export default function RootLayout({
 }) {
   return (
       <html lang="en">
+      <NotificationProvider>
           <body>
-              <Header/>
-              {children}
-              <Footer/>
+            <Notification/>
+            <Header/>
+                {children}
+            <Footer/>
           </body>
+      </NotificationProvider>
       </html>
   )
 }

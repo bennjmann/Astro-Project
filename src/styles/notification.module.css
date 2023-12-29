@@ -1,0 +1,27 @@
+.Notification {
+    opacity: 0;
+    animation: var(--animation-fade-in) forwards, var(--animation-slide-in-up);
+    animation-timing-function: var(--ease-1);
+    animation-duration: 1.25s;
+
+
+    padding: var(--size-3);
+    z-index: 2;
+    background: #B61B1B;
+    position: sticky;
+    top: 75%; left: 2.5%;
+    display: flex;
+    gap: var(--size-3);
+    flex-direction: column;
+    max-width: 250px;
+    margin: -250px;
+
+    float: left;
+
+}
+
+@media (max-width: 768px) {
+    .Notification {
+        top: 60%; left: 5%;
+    }
+}

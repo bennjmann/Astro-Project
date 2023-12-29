@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Styles from '@/styles/index.module.css'
 import AnimationWrapper from "@/components/AnimationWrapper";
@@ -5,7 +7,14 @@ import Project from "@/components/Project";
 import Skill from "@/components/Skill";
 import Link from "next/link";
 
+import UseNotificationAPI from "@/hooks/UseNotificationAPI";
+
 export default function Home() {
+	const {addNotification} = UseNotificationAPI();
+
+
+
+
   return (
       <main>
         <div id="hero" className={`container ${Styles.HeroContainer}`}>
@@ -15,8 +24,8 @@ export default function Home() {
             <p>Empowering the Future through Project Development</p>
           </div>
           <div>
-            <button className="primary">Resume</button>
-            <button><Link className="secondary" href={'#contact'}>Contact me</Link></button>
+            <button className="primary" onClick={() => {addNotification("Work In Progress", "Working on it. Come back another time")}}>Resume</button>
+            <Link className="secondary" href={'#contact'}><button>Contact me</button></Link>
           </div>
         </div>
         <div className={Styles.blurredColour}>
